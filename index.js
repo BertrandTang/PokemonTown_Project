@@ -1,23 +1,22 @@
 const canvas = document.querySelector("canvas"); // On récupère le canvas
 const context = canvas.getContext("2d"); // On crée le contexte (ici 2d), ceci crée un objet pleins de propriétés (voir console.log)
-console.log(context);
+
 const mapWidth = 280;
 // On redimensionne le canvas
 canvas.width = 1024;
 canvas.height = 576;
 
 const collisionsMap = [];
-
 for (let index = 0; index < collisions.length; index += mapWidth) {
   // index+=140 (taille de la largeur de la map) on veut créer des arrays de la taille de la largeur
   collisionsMap.push(collisions.slice(index, mapWidth + index)); // On slice (coupe) les arrays en 140
 }
-
 const limits = [];
 const offset = {
   x: -1728,
   y: -800,
 };
+
 collisionsMap.forEach((row, rowIndex) => {
   row.forEach((cell, j) => {
     if (cell === 225)
@@ -54,7 +53,6 @@ const player = new Sprite({
   },
 });
 
-
 const background = new Background({
   position: {
     x: offset.x,
@@ -87,6 +85,7 @@ const rectangularCollision = ({ rectangle1, rectangle2 }) => {
     rectangle1.position.y + rectangle1.height >= rectangle2.position.y
   );
 };
+
 const animate = () => {
   // On crée une fonction qui va animer le canvas
   window.requestAnimationFrame(animate); // On demande à animer le canvas
@@ -125,7 +124,7 @@ const animate = () => {
     }
     if (moving) {
       movables.forEach((movable) => {
-        movable.position.y -= 3;
+        movable.position.y -= 3
       });
     }
   } else if (keys.z.pressed && lastKey === "z") {
@@ -209,9 +208,10 @@ const animate = () => {
         movable.position.x += 3;
       });
     }
+  } else if (!moving) {
+    player.frames.max = 0;
   }
 };
-
 animate(); // On appelle la fonction animate
 
 let lastKey = "";
