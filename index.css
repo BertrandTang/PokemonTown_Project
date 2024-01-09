@@ -1,7 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
 body{
     background-color: black;
+}
+h1{
+    color: white;
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 6rem;
+    text-align: center;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+}
+
+#commands_list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#commands_list li{
+    text-align: center;
+    list-style-type: none;
+    font-family: 'Silkscreen', sans-serif;
+    color: white;
+    font-size: 3rem;
+    padding: 1rem 2rem;
 }
 
 canvas{
     background-color: white;
+    border-radius: 60px;
+}
+
+footer{
+    text-align: center;
+    color: white;
+    font-family: 'Silkscreen', sans-serif;
 }

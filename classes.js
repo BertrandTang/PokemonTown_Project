@@ -5,8 +5,8 @@ class Sprite {
     this.frames = { ...frames, val: 0, elapsed: 0 };
     this.side = 0;
     this.image.onload = () => {
-      this.width = this.image.width / 4 - 1;
-      this.height = this.image.height / 4 - 1;
+      this.width = this.image.width / 4;
+      this.height = this.image.height / 4;
       console.log(this.width, this.height);
     };
     this.moving = false;
