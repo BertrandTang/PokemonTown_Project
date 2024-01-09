@@ -8,6 +8,15 @@ h1{
     font-family: 'Silkscreen', sans-serif;
     font-size: 6rem;
     text-align: center;
+    margin: 1rem;
+}
+
+p{
+    color: white;
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 2rem;
+    margin:2rem;
+    text-align: center;
 }
 
 #container{
