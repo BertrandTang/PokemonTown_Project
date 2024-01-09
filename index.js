@@ -34,13 +34,13 @@ collisionsMap.forEach((row, rowIndex) => {
 console.log(limits);
 
 const image = new Image(); // On crée une constante qui hérite des propriétés de Image();
-image.src = "./img/PokemonTown.png"; // On indique la source l'image qu'on veut dessiner
+image.src = "img/PokemonTown.png"; // On indique la source l'image qu'on veut dessiner
 
 const foregroundImage = new Image(); // On crée une constante qui hérite des propriétés de Image();
-foregroundImage.src = "./img/foregroundObjects.png"; // On indique la source l'image qu'on veut dessiner
+foregroundImage.src = "img/foregroundObjects.png"; // On indique la source l'image qu'on veut dessiner
 
 const playerImage = new Image(); // On crée une constante qui hérite des propriétés de Image();
-playerImage.src = "./img/trainer_POKEMONTRAINER_Brendan.png"; // On indique la source l'image qu'on veut dessiner
+playerImage.src = "img/trainer_POKEMONTRAINER_Brendan.png"; // On indique la source l'image qu'on veut dessiner
 
 const player = new Sprite({
   position: {
